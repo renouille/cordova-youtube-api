@@ -7,10 +7,10 @@ Modified by [Renouille] - Original by remcob00
 ## Installation ##
 * Install through CLI:
 ```
-cordova plugin install https://github.com/renouille/cordova-youtube-api
+cordova plugin add https://github.com/renouille/cordova-youtube-api
 ``` 
 * Register your app and get a api key ([here the instructions from Google](https://developers.google.com/youtube/android/player/register))
-* Place your api key in the YouTube.java file in com.remcob00.plugins.youtube at line 38
+* Place your api key in the YouTube.java file in ch.renouille.youtube at line 38
 
 ## How to use ##
 * Add the following line to the head of your html file
@@ -31,6 +31,8 @@ window.plugins.youtube.show({
 * Auto playlist suppoty
 
 ## Release notes ##
+### 11-06-14 ###
+* Modification to work with CLI
 ### 29-12-12 ###
 * First release by Remco Beugels (RemcoB00)
 
