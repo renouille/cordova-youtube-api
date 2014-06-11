@@ -8,9 +8,9 @@
 
 package ch.renouille.youtube;
 
+import org.json.JSONObject;
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -33,9 +33,7 @@ public class Youtube extends CordovaPlugin {
 			callbackContext.sendPluginResult(new PluginResult(status, result));
 		} catch (JSONException e) {
             callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.JSON_EXCEPTION));
-        } catch (MalformedURLException e) {
-            callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.MALFORMED_URL_EXCEPTION));
-		}
+        }
         return true;
 	}
 	
