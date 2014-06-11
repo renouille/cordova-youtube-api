@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="ch.renouille.youtube"
+    version="1.0">
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <name>Youtube</name>
+    <description>Support Youtube API for Android by Google</description>
+    <author>Renouille</author>
+    <keywords>youtube,video</keywords>
+    <license>MIT</license>
+    
+    <js-module src="www/youtube.js" name="Youtube">
+        <clobbers target="Youtube" />
+    </js-module>
+    
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Youtube" >
+                <param name="android-package" value="ch.renouille.youtube.Youtube"/>
+            </feature>
+        </config-file>
+        
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+        <source-file src="src/Youtube.java" target-dir="src/ch/renouille/youtube" />
+        <source-file src="src/YouTubeAndroidPlayerApi.jar" target-dir="libs" />
+    </platform>
+</plugin>
