@@ -13,7 +13,7 @@ Youtube.prototype.show = function(content, success, fail) {
         success(args);
     }, function(args) {
         fail(args);
-    }, 'YouTube', '', [content]);
+    }, 'Youtube', '', [content]);
 };
 
 if(!window.plugins) {
