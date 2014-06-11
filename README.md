@@ -33,6 +33,7 @@ window.plugins.youtube.show({
 ## Release notes ##
 ### 11-06-14 ###
 * Modification to work with CLI
+
 ### 29-12-12 ###
 * First release by Remco Beugels (RemcoB00)
 
