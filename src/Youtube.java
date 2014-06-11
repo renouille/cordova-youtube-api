@@ -27,6 +27,8 @@ public class Youtube extends CordovaPlugin {
 	@Override
 	public boolean execute(String action, JSONArray args, String callbackId) {
 		PluginResult.Status status = PluginResult.Status.OK;
+		JSONArray result = new JSONArray();
+		
 		try {
 			JSONObject jo = args.getJSONObject(0);
 			doSendIntent(jo.getString("videoid")); 
