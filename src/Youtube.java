@@ -25,7 +25,7 @@ import com.google.android.youtube.player.YouTubeStandalonePlayer;
 public class Youtube extends CordovaPlugin {
 
 	@Override
-	public boolean execute(String action, JSONArray args, String callbackId) {
+	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
 		PluginResult.Status status = PluginResult.Status.OK;
 		JSONArray result = new JSONArray();
 		
