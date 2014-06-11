@@ -26,13 +26,17 @@ public class Youtube extends CordovaPlugin {
 
 	@Override
 	public boolean execute(String action, JSONArray args, String callbackId) {
+		PluginResult.Status status = PluginResult.Status.OK;
 		try {
 			JSONObject jo = args.getJSONObject(0);
 			doSendIntent(jo.getString("videoid")); 
 			return new PluginResult(PluginResult.Status.OK);
 		} catch (JSONException e) {
-			return new PluginResult(PluginResult.Status.JSON_EXCEPTION);
+            callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.JSON_EXCEPTION));
+        } catch (MalformedURLException e) {
+            callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.MALFORMED_URL_EXCEPTION));
 		}
+        return true;
 	}
 	
 	private void doSendIntent(String videoid) {
