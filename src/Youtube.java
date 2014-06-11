@@ -2,10 +2,11 @@
  * 
  * Cordova / Phonegap YouTube Embed API Plugin
  * Remco Beugels (RemcoB00) 2012
+ * Modified by renouille 2014
  *
  */
 
-package com.remcob00.plugins.youtube;
+package ch.renouille.youtube;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -21,7 +22,7 @@ import org.apache.cordova.PluginResult;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubeStandalonePlayer;
 
-public class YouTube extends CordovaPlugin {
+public class Youtube extends CordovaPlugin {
 
 	@Override
 	public PluginResult execute(String action, JSONArray args, String callbackId) {
