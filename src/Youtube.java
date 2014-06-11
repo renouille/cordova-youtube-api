@@ -25,7 +25,7 @@ import com.google.android.youtube.player.YouTubeStandalonePlayer;
 public class Youtube extends CordovaPlugin {
 
 	@Override
-	public PluginResult execute(String action, JSONArray args, String callbackId) {
+	public boolean execute(String action, JSONArray args, String callbackId) {
 		try {
 			JSONObject jo = args.getJSONObject(0);
 			doSendIntent(jo.getString("videoid")); 
