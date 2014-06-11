@@ -14,13 +14,14 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.content.Intent;
 
-import org.apache.cordova.api.Plugin;
-import org.apache.cordova.api.PluginResult;
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.PluginResult;
 
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubeStandalonePlayer;
 
-public class YouTube extends Plugin {
+public class YouTube extends CordovaPlugin {
 
 	@Override
 	public PluginResult execute(String action, JSONArray args, String callbackId) {
