@@ -6,9 +6,9 @@
  *
  */
 
-var YouTube = function() {};
+var Youtube = function() {};
             
-YouTube.prototype.show = function(content, success, fail) {
+Youtube.prototype.show = function(content, success, fail) {
     return cordova.exec( function(args) {
         success(args);
     }, function(args) {
@@ -20,5 +20,5 @@ if(!window.plugins) {
     window.plugins = {};
 }
 if (!window.plugins.youtube) {
-    window.plugins.youtube = new YouTube();
+    window.plugins.youtube = new Youtube();
 }
